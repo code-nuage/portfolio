@@ -1,0 +1,21 @@
+{
+    "tag": "header", "attributes": { "class": "navbar fixed w-lvw" },
+    "content": [{
+        "tag":"nav",
+        "attributes": { "class": "bg-white mx-auto flex justify-between p-4 backdrop-blur-m bg-opacity-50" },
+        "content": [{
+            "tag":"div", "attributes": { "class":"left" },
+            "content": [{
+                "tag":"img", "attributes": { "src":"/icon_dark.svg" }
+            }]
+        },
+        {
+            "tag": "div", "attributes": { "class": "right flex items-center" },
+            "content": [
+                { "tag": "a", "attributes": { "href": "/", "class": "text-gray-900 m-1" }, "content": "Home" },
+                { "tag": "a", "attributes": { "href": "/projects", "class": "text-gray-900 m-1" }, "content": "My projects" },
+                { "tag": "a", "attributes": { "href": "/contacts", "class": "text-gray-900 m-1" }, "content": "Contact me" }
+            ]
+        }]
+    }]
+}
