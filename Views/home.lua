@@ -1,13 +1,12 @@
-local loader = require("../Utils/direct/loader")
 local html = require("../Utils/direct/html")
 local xml = require("../Utils/direct/xml")
 
 local boilerplate = require("../boilerplate")
 
 return function()
-    local component_navbar = loader.read_json("./Components/navbar.json")
-    local component_home = loader.read_json("./Components/home.json")
-    local component_footer = loader.read_json("./Components/footer.json")
+    local component_navbar = require("./Components/navbar")()
+    local component_home = require("./Components/home")()
+    local component_footer = require("./Components/footer")()
 
     local view_home = boilerplate()
     local body = xml.get_by_tag(view_home, "body")

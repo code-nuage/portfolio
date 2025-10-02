@@ -1,0 +1,35 @@
+/* Tailwind fix since Tailwind is absolute SH*T
+ * Please use SASS, even CSS is better
+ */
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+
+* {
+    box-sizing: content-box;
+}
+
+.navbar nav {
+    transition: all 0.15s;
+}
+
+.navbar.scrolled nav {
+    max-width: 1280px;
+    margin: 8px auto;
+    border: 1px solid;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity, .2));
+    border-radius: 8px;
+}
+
+.development > * > .animate-breathe {
+    animation: breathe 1.5s ease-in-out infinite;
+}

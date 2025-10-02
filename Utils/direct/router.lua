@@ -114,6 +114,40 @@ function router:set_route(route, method, controller)
     return self
 end
 
+function router:publicize(dirpath, route_base)
+    assert(type(dirpath) == "string", "Argument <dirpath> must be a string.")
+    route_base = route_base or ""
+
+    for entry in fs.scandir(dirpath) do
+        local fullpath = pathJoin(dirpath, entry.name)
+
+        if entry.type == "file" then
+            local route_path = route_base .. "/" .. entry.name
+
+            self:set_route(route_path, "GET", function(_, res)
+                local content, err = fs.readFile(fullpath)
+
+                if not content then
+                    res:set_status(500)
+                    res:set_header("Content-Type", "text/plain")
+                    res:set_body("Internal server error: " .. err)
+                    return
+                end
+
+                res:set_status(200)
+                res:set_header("Content-Type", guess_mime(fullpath))
+                res:set_body(content)
+            end)
+
+        elseif entry.type == "directory" then
+            self:publicize(fullpath, route_base .. "/" .. entry.name)
+        end
+    end
+
+    return self
+end
+
+
 function router:set_not_found(controller)
     self.not_found_controller = controller
     return self
@@ -146,34 +180,6 @@ function router:handle_request(req, res)
     end
 
     self:not_found(req, res)
-end
-
-function router:publicize(dirpath)
-    assert(type(dirpath) == "string", "Argument <dirpath> must be une string.")
-
-    for entry in fs.scandir(dirpath) do
-        if entry.type == "file" then
-            local fullpath = pathJoin(dirpath, entry.name)
-            local route_path = "/" .. entry.name
-
-            self:set_route(route_path, "GET", function(req, res)
-                local content, err = fs.readFile(fullpath)
-
-                if not content then
-                    res:set_status(500)
-                    res:set_header("Content-Type", "text/plain")
-                    res:set_body("Internal server error: " .. err)
-                    return
-                end
-
-                res:set_status(200)
-                res:set_header("Content-Type", guess_mime(fullpath))
-                res:set_body(content)
-            end)
-        end
-    end
-
-    return self
 end
 
 function router:display_request(req, res)
