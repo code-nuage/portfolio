@@ -41,6 +41,22 @@ return function()
             url = "https://github.com/code-nuage/dotfiles",
             status = "DEVELOPMENT",
             button_text = "See on Github"
+        },
+        {
+            name = "Cinema Roll",
+            description = "A movie listing website",
+            image = "/Assets/cinema_roll.webp",
+            url = "https://github.com/code-nuage/cinema-roll",
+            status = "DEPRECATED",
+            button_text = "See on Github"
+        },
+        {
+            name = "simpliestui",
+            description = "A CSS framework / design system to create very basic website",
+            image = "/Assets/simpliestui.webp",
+            url = "https://github.com/code-nuage/simpliestui",
+            status = "FINISHED",
+            button_text = "See on Github"
         }
     }
 
@@ -60,7 +76,7 @@ return function()
             {
                 tag = "h1",
                 attributes = {
-                    class = "text-2xl sm:text-3xl md:text-5xl font-bold text-sky-50"
+                    class = "font-outfit text-2xl sm:text-3xl md:text-5xl font-bold text-sky-50"
                 },
                 content = "My projects"
             },

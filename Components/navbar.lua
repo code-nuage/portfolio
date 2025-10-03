@@ -1,10 +1,10 @@
 return function() 
     return {
-        tag = "header", attributes = { class = "navbar fixed w-lvw transition duration-150 z-10" },
+        tag = "header", attributes = { class = "navbar fixed flex justify-center w-lvw transition duration-150 z-10" },
         content = {
             { tag = "script", attributes = { src = "/Scripts/navbar.js"}, content = ""},
             {
-                tag = "nav", attributes = { class = "bg-white flex justify-between p-4 backdrop-blur-md backdrop-saturate-175 bg-opacity-30 transition duration-150" },
+                tag = "nav", attributes = { class = "bg-white w-[100%] flex justify-between p-4 backdrop-blur-md backdrop-saturate-175 bg-opacity-30 transition duration-150" },
                 content = {
                     {
                         tag = "div", attributes = { class = "left" },
