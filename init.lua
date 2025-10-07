@@ -19,5 +19,6 @@ local app = router:new()
 
 routes.home(app)
 routes.projects(app)
+routes.contacts(app)
 
 app:start()

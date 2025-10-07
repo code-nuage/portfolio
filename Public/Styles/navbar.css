@@ -4,6 +4,12 @@
     z-index: 10;
 }
 
+.navbar.scrolled {
+    background-color: hsla(0, 0%, 100%, 75%);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
 .navbar nav {
     display: flex;
     align-items: center;
