@@ -10,7 +10,7 @@ return function()
     local projects = {}
 
     for _, p in ipairs(model_projects) do
-        table.insert(projects, presenter_project(p.image_url, p.image_alt, p.title, p.description, p.status, p.link_name, p.link_name))
+        table.insert(projects, presenter_project(p.image_url, p.image_alt, p.title, p.description, p.status, p.link_url, p.link_name))
     end
 
     presenter_projects = presenter_projects:gsub("{{data:projects}}", table.concat(projects))

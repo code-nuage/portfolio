@@ -211,28 +211,14 @@ hr {
 .grid-col-11 { grid-column: span 11; }
 .grid-col-12 { grid-column: span 12; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
     .grid-row {
-        display: block;
-        width: 100%;
+        grid-template-columns: repeat(8, 1fr);
     }
-    [class*="grid-col-"] {
-        width: 100%;
+}
+
+@media screen and (max-width: 560px) {
+    .grid-row {
+        grid-template-columns: repeat(4, 1fr);
     }
-
-    .gap-2  { margin: -1px -2px; }
-    .gap-4  { margin: -2px -4px; }
-    .gap-8  { margin: -4px -8px; }
-    .gap-12 { margin: -6px -12px; }
-    .gap-16 { margin: -8px -16px; }
-    .gap-24 { margin: -12px -24px; }
-    .gap-32 { margin: -16px -32px; }
-
-    .gap-2  [class*="grid-col-"]  { margin: 1px 2px; }
-    .gap-4  [class*="grid-col-"]  { margin: 2px 4px; }
-    .gap-8  [class*="grid-col-"]  { margin: 4px 8px; }
-    .gap-12 [class*="grid-col-"]  { margin: 6px 12px; }
-    .gap-16 [class*="grid-col-"]  { margin: 8px 16px; }
-    .gap-24 [class*="grid-col-"]  { margin: 12px 24px; }
-    .gap-32 [class*="grid-col-"]  { margin: 16px 32px; }
 }
