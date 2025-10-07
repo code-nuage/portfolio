@@ -71,6 +71,7 @@ function router.new()
     i.host = nil
     i.port = nil
     i.verbosity = false
+    i.log_file = false
 
     return i
 end
@@ -84,6 +85,12 @@ end
 function router:set_verbosity(verbosity)
     assert(type(verbosity) == "boolean", "Argument <verbosity> must be a boolean.")
     self.verbosity = verbosity
+    return self
+end
+
+function router:set_log_file(path)
+    assert(type(path) == "string", "Argument <path> must be a string.")
+    self.log_file = path
     return self
 end
 
@@ -180,6 +187,16 @@ function router:handle_request(req, res)
     end
 
     self:not_found(req, res)
+end
+
+function router:register_log(req, res)
+    local log = "Path: " ..  req["Path"] .. " " ..
+    "User-Agent: " .. (req["Headers"]["User-Agent"] or "?") .. " " ..
+    "Method: " .. req["Method"] .. " " ..
+    "Status-Code: " .. res["Status-Code"] .. "\n"
+    local file = fs.open(self.log_file or "./logs.txt", "a")
+    fs.write(file, log)
+    fs.close(file)
 end
 
 function router:display_request(req, res)
@@ -336,6 +353,9 @@ function router:start()
         self:handle_request(req, res)
         if self.verbosity then
             self:display_request(req, res)
+        end
+        if self.log_file then
+            self:register_log(req, res)
         end
 
         local headers = {}
