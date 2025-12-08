@@ -1,0 +1,26 @@
+.project {
+    min-height: 100vh;
+    padding: 64px 0;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project .tags {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.project .description-long {
+    padding-top: 16px;
+}

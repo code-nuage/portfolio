@@ -1,0 +1,15 @@
+.navbar {
+    min-width: 100vw;
+    backdrop-filter: blur(8px);
+    position: fixed;
+    padding: 8px;
+}
+
+.navbar div ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar div ul li {
+    list-style: none;
+}

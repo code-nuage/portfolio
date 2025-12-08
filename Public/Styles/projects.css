@@ -1,0 +1,25 @@
+.projects .card {
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 8px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .card img {
+    border-radius: 8px 8px 0 0;
+}
+
+.projects .card .bottom {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.projects .card .bottom .tags {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
