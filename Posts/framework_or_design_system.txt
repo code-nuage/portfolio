@@ -1,0 +1,18 @@
+Title: Framework ou design system ?
+Date: 12/08/25
+
+Sub: Préambule
+Ce (premier (petit)) article de blog va parler de "mode" dans le monde du développement web. En particulier sur un sujet clairement orienté vers le front-end : la distinction entre framework et design system.
+Ce que je mentionne dans cet article est un point de vue subjectif, associé à une expérience personnelle. Mais également associé à un point de vue plus large et objectif, purement "technique" des outils que l'on utilise aujourd'hui.
+
+Sub: Qu'est-ce qu'un design system exactement ?
+Selon Figma, dans SHORTCUT, un design system "enregistre les principes et les éléments qui définissent l'expérience des utilisateurs. Les couleurs et les icônes sont choisies avec précision, les boutons ont une taille et une forme homogènes".
+On voit donc un axe clair de ce à quoi sert un design system, et comment le fabriquer : avoir une cohérence visuelle agréable, au travers de caractéristiques strictes, immuables et globales. Son implémentation technique peut aller d'une simple feuille de style à un document technique de plusieurs dizaines de pages.
+
+Selon Google, Material Design est un ensemble de caractéristiques qui définissent l'expérience utiliseur d'un logiciel, au travers de :
+Bullet: couleurs vibrantes
+Bullet: gestuelles intuitives
+Bullet: composants modulaires
+Bullet: Typographies flexibles
+Bullet: Formes contrastées
+Tout cela décrit un design system clair, certes large, mais il définit tout de même quel est la direction que Google veut prendre avec son propre desgin system.
