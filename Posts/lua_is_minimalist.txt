@@ -1,2 +1,0 @@
-Title: Lua est minimaliste
-Date: MM/DD/YY

@@ -1,5 +1,5 @@
 Title: Framework ou design system ?
-Date: 12/08/25
+Date: 12/08/2025
 
 Sub: Préambule
 Ce (premier (petit)) article de blog va parler de "mode" dans le monde du développement web. En particulier sur un sujet clairement orienté vers le front-end : la distinction entre framework et design system.
@@ -13,6 +13,6 @@ Selon Google, Material Design est un ensemble de caractéristiques qui définiss
 Bullet: couleurs vibrantes
 Bullet: gestuelles intuitives
 Bullet: composants modulaires
-Bullet: Typographies flexibles
-Bullet: Formes contrastées
+Bullet: typographies flexibles
+Bullet: formes contrastées
 Tout cela décrit un design system clair, certes large, mais il définit tout de même quel est la direction que Google veut prendre avec son propre desgin system.
