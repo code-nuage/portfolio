@@ -35,6 +35,8 @@ return function(text)
             elseif key == "date" then
                 local timestamp, err = parse_date(value)
                 result.timestamp = timestamp
+            elseif key == "lang" then
+                result.lang = value
             end
         end
     end

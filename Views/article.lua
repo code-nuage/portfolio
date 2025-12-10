@@ -1,8 +1,8 @@
 local bundler = require("../Utils/bundler.lua")
 
-local model_posts = require("../Models/posts.lua")
+local model_articles = require("../Models/articles.lua")
 
-local function map_post_tags(content)
+local function map_article_tags(content)
     local remapped_content = ""
 
     for _, tag in ipairs(content) do
@@ -26,28 +26,29 @@ local function map_post_tags(content)
 end
 
 return function(id)
-    local post = model_posts[id]
+    local article = model_articles[id]
 
     local styles = {
         "/Styles/simpliestui.css",
         "/Styles/navbar.css",
-        "/Styles/post.css",
+        "/Styles/article.css",
         "/Styles/footer.css"
     }
 
-    local template_post = bundler.load("./Templates/post.mu")
-    :gsub("{{data:post_title}}", post.title)
-    :gsub("{{data:post_date}}", os.date("%m/%d/%Y", post.timestamp))
-    :gsub("{{data:post_content}}", map_post_tags(post.content))
+    local template_article = bundler.load("./Templates/article.mu")
+    :gsub("{{data:article_title}}", article.title)
+    :gsub("{{data:article_flag}}", get_flag(article.lang))
+    :gsub("{{data:article_date}}", os.date("%m/%d/%Y", article.timestamp))
+    :gsub("{{data:article_content}}", map_article_tags(article.content))
 
     local templates = {
         bundler.load("./Templates/navbar.mu"),
-        template_post,
+        template_article,
         bundler.load("./Templates/footer.mu")
     }
 
     local options = {
-        title = "Eloi Hariot | " .. post.title,
+        title = "Eloi Hariot | " .. article.title,
         styles = styles
     }
 
