@@ -8,13 +8,14 @@ return function(id)
 
     local styles = {
         "/Styles/simpliestui.css",
+        "/Styles/blog_page.css",
         "/Styles/navbar.css",
         "/Styles/blog.css",
         "/Styles/footer.css"
     }
 
     local options = {
-        title = "Eloi Hariot | Portfolio",
+        title = "Eloi Hariot | Blog",
         styles = styles
     }
 

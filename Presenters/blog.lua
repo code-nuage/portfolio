@@ -49,7 +49,7 @@ return function(quantity, start)
         component_article = component_article                                  -- stringify every value to avoid blocking nil values during mapping
 
         local link_uri = uri_encode(article.title)
-        local link = string.format("blog/article/%s", link_uri)
+        local link = string.format("/blog/article/%s", link_uri)
         :gsub("%%", "%%%%")
 
         presenter_blog = presenter_blog .. component_article

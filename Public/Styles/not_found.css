@@ -1,0 +1,14 @@
+.not-found {
+    min-height: 100vh;
+}
+
+.not-found .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.not-found .container a {
+    margin-top: 16px;
+}

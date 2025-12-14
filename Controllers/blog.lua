@@ -10,7 +10,6 @@ local article_controller = {}
 local function uri_encode(s)
     if s == nil then return nil end
     local out = {}
-    local insert = table.insert
     local len = #s
     for i = 1, len do
         local b = string.byte(s, i)
@@ -27,6 +26,11 @@ end
 
 function article_controller.get_blog(req, res)
     local id = tonumber(req:get_param("id"))
+
+    if id * 9 - 9 > #model_articles or id <= 0 then
+        res:get_not_found_fallback(req, res)
+        return
+    end
 
     res
     :set_code(200)
