@@ -47,6 +47,8 @@ function M.build(content, options)
         data_scripts = data_scripts .. string.format("<script src=\"%s\"></script>\n", path)
     end
 
+    content = content:gsub("%%", "%%%%")
+
     bundle = bundle
     :gsub("{{options:title}}", title)
     :gsub("{{options:styles}}", data_styles)

@@ -1,0 +1,23 @@
+.article {
+    padding: 64px;
+    min-height: 100vh;
+}
+
+.article .article-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article .image-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.article .image-container img {
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 400px;
+}
