@@ -23,7 +23,7 @@ return function(id)
 
     local templates = {
         bundler.load("./Templates/navbar.mu"),
-        bundler.load("./Templates/blog.mu"):gsub("{{data:blog}}", presenter_blog(quantity, start))
+        bundler.load("./Templates/blog.mu"):gsub("{{data:blog}}", presenter_blog(quantity, start):gsub("%%", "%%%%"))
         :gsub("{{data:footer}}", template_nav),
         bundler.load("./Templates/footer.mu")
     }

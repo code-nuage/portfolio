@@ -1,7 +1,10 @@
 <section class="article">
     <div class="container">
-        <h2 class="title text-size-display-large text-weight-bold">{{data:article_title}}</h2>
-        <span class="date"><code>{{data:article_date}}</code></span>
-        {{data:article_content}}
+        <div class="article-header">
+            <h2 class="title text-size-display-large text-weight-bold">{{data:title}}</h2>
+            <span class="flag text-size-display-large">{{data:flag}}</span>
+        </div>
+        <span class="date"><code>{{data:date}}</code></span>
+        {{data:content}}
     </div>
 </section>

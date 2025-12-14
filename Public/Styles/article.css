@@ -3,6 +3,12 @@
     min-height: 100vh;
 }
 
+.article .article-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .article .image-container {
     width: 100%;
     display: flex;

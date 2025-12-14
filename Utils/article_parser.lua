@@ -17,8 +17,9 @@ end
 
 return function(text)
     local header_part, body_part = text:match("^(.-)\n\n(.*)$")
+
     if not header_part then
-        return nil, "Invalid format"
+        return nil, "Invalid format, can't find header part"
     end
 
     local result = { content = {} }

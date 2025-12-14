@@ -5,11 +5,9 @@ Lang: FR
 Sub: Préambule
 Ce (premier (petit)) article de blog va parler de "mode" dans le monde du développement web. En particulier sur un sujet clairement orienté vers le front-end : la distinction entre framework et design system.
 Ce que je mentionne dans cet article est un point de vue subjectif, associé à une expérience personnelle. Mais également associé à un point de vue plus large et objectif, purement "technique" des outils que l'on utilise aujourd'hui.
-
 Sub: Qu'est-ce qu'un design system exactement ?
 Selon Figma, dans SHORTCUT, un design system "enregistre les principes et les éléments qui définissent l'expérience des utilisateurs. Les couleurs et les icônes sont choisies avec précision, les boutons ont une taille et une forme homogènes".
 On voit donc un axe clair de ce à quoi sert un design system, et comment le fabriquer : avoir une cohérence visuelle agréable, au travers de caractéristiques strictes, immuables et globales. Son implémentation technique peut aller d'une simple feuille de style à un document technique de plusieurs dizaines de pages.
-
 Selon Google, Material Design est un ensemble de caractéristiques qui définissent l'expérience utiliseur d'un logiciel, au travers de :
 Bullet: couleurs vibrantes
 Bullet: gestuelles intuitives
@@ -17,3 +15,20 @@ Bullet: composants modulaires
 Bullet: typographies flexibles
 Bullet: formes contrastées
 Tout cela décrit un design system clair, certes large, mais il définit tout de même quel est la direction que Google veut prendre avec son propre desgin system.
+Cela nous permettra de comparer les design system aux frameworks les plus communs.
+Sub: Framework ?
+Il est possible de lire sur la page d'accueil de Bootstrap qu'il se définit lui-même comme une "boîte à outils" front-end. Ni vraiment comme un framework, ni vraiment comme un design system. Il possède pourtant des caractéristiques des deux concepts : des classes utilitaires de grille par exemple, des palettes de couleurs prédéfinies et même une collection importante de composants préconstruits.
+Tout cela nous prouve qu'un juste milieu existe, et Bootstrap n'est pas seul, la plupart des outils front-end de design ont ses caractéristiques, PicoCSS, Simple.css, Pure etc... Tous possèdent plus ou moins des caractéristiques de framework et de design system.
+Toutes ces technologies ne sont ni des frameworks à part entière, ni des design systems complets, je trouve personnellement le nom de "boîte à outils" bien trouvé.
+Sub: Tailwind
+Tailwind dans sa forme la plus simple de librairie est un framework, que la communauté a élargi au travers de collections de composants prêts à l'emploi, qui ne sont pas inclus nativement dans Tailwind.
+Pourtant Tailwind Labs, l'entreprise derrière Tailwind, propose elle même un kit interface utilisateur: des composants et des templates complets, payant, et construit au dessus de Tailwind.
+Et même dans sa version gratuite, Tailwind nous impose indirectement une palette de couleurs, certes imposante, mais qui nous impose inconsciemment de l'utiliser, tout en refusant l'appellation de design system.
+Sub: À quoi bon ?
+Tout ces points m'ont mené à la refléxion suivante : Existe-t-il vraiment un framework front-end ? Quelque qui nous imposerait un point de vue sur comment concevoir une interface techniquement ?
+Est-ce même cohérent de parler de "framework" CSS ? Ne devrions-nous pas utiliser un termes plus idiomatique pour décrire ce qu'est réellement un "framework" CSS ?
+Sub: Sources
+<a href="https://m3.material.io/">Google Material Design</a>
+<a href="https://www.figma.com/blog/design-systems-101-what-is-a-design-system/">SHORTCUT: What is a design system?</a>
+<a href="https://tailwindcss.com/">TailwindCSS</a>
+<a href="https://tailwindcss.com/plus?ref=top">Tailwind Plus</a>

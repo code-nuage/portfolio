@@ -24,7 +24,7 @@ return function()
         bundler.load("./Templates/navbar.mu"),
         bundler.load("./Templates/hero.mu"),
         bundler.load("./Templates/projects.mu"):gsub("{{data:projects}}", presenter_projects()),
-        bundler.load("./Templates/blog.mu"):gsub("{{data:blog}}", presenter_blog(3))
+        bundler.load("./Templates/blog.mu"):gsub("{{data:blog}}", presenter_blog(3):gsub("%%", "%%%%"))
         :gsub("{{data:footer}}", "<a href=\"/blog/1\" class=\"see-more pos-right\">See more</a>"),
         bundler.load("./Templates/contacts.mu"),
         bundler.load("./Templates/footer.mu")
