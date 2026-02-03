@@ -1,0 +1,8 @@
+main {
+    min-height: 100vh;
+    padding: var(--sp-huge) var(--sp-regular) !important;
+}
+
+.article-card {
+    justify-content: space-between;
+}

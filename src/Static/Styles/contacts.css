@@ -1,0 +1,14 @@
+main {
+    min-height: 100vh;
+    padding: var(--sp-huge) var(--sp-regular) !important;
+}
+
+main img {
+    border-radius: var(--br-in);
+}
+
+main #contacts > * {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

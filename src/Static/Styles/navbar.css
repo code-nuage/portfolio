@@ -1,0 +1,22 @@
+header {
+    width: 100vw;
+    padding: var(--sp-regular) var(--sp-regular) !important;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container > * {
+    display: flex;
+    align-items: center;
+}
+
+header .right img {
+    height: 1rem;
+}
