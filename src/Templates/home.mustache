@@ -6,11 +6,21 @@
     </section>
     <hr class="separator">
     <section id="portfolio">
-        <h2 class="ts-display tw-bold">Portfolio</h2>
+        <div class="top">
+            <h2 class="ts-display tw-bold">Portfolio</h2>
+            <a href="/portfolio" class="tc-primary">See more</a>
+        </div>
+        <span class="ts-huge tw-bold tc-warning">Section under construction</span>
     </section>
     <hr class="separator">
-    <section id="blog">
-        <h2 class="ts-display tw-bold">Blog</h2>
+    <section id="blog" class="gap-regular">
+        <div class="top">
+            <h2 class="ts-display tw-bold">Blog</h2>
+            <a href="/blog?page=1" class="tc-primary">See more</a>
+        </div>
+        <div class="grid-row gap-regular">
+            {{articles_preview}}
+        </div>
     </section>
 </main>
 {{footer}}

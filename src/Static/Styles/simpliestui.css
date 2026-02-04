@@ -108,7 +108,7 @@ body {
 
 @media screen and (max-width: 960px) {
     .container {
-        width: auto;
+        width: 100%;
     }
 }
 
