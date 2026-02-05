@@ -1,0 +1,12 @@
+main {
+    min-height: 100vh;
+    padding: var(--sp-huge) var(--sp-regular) !important;
+}
+
+main .left, main .right {
+    display: flex;
+    flex-direction: column;
+}
+
+main .right img {
+}
