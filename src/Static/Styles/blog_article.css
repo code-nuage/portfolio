@@ -1,0 +1,8 @@
+.article-card {
+    justify-content: space-between;
+}
+
+.article-card .top {
+    display: flex;
+    flex-direction: column;
+}

@@ -8,7 +8,7 @@ main section {
     flex-direction: column;
 }
 
-main section .top {
+main section .title {
     display: flex;
     align-items: center;
     justify-content: space-between;

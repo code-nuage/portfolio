@@ -8,5 +8,9 @@ return function(project_data: model_project.ProjectData): fragment
       :gsub("{{img}}", project_data.img)
       :gsub("{{title}}", project_data.title)
       :gsub("{{description}}", project_data.description)
-      :gsub("{{link}}", "/project/" .. project_data.filename), {})
+      :gsub("{{link}}", "/project/" .. project_data.filename), {
+         styles = {
+            "/Styles/portfolio_project.css"
+         }
+      })
 end

@@ -1,3 +1,12 @@
+local function table_contains(list: {any}, value: any): boolean
+   for _, v in ipairs(list) do
+      if value == v then
+         return true
+      end
+   end
+   return false
+end
+
 local interface Options
    title: string
    styles: {string}
@@ -31,7 +40,9 @@ function fragment:set_html(text: string): fragment
 end
 
 function fragment:add_style(style: string): fragment
-   table.insert(self.styles, style)
+   if not table_contains(self.styles, style) then                              -- Injecting every stylesheet only once
+      table.insert(self.styles, style)
+   end
    return self
 end
 
